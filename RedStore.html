@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RedStore</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	}
+.navbar{
+	display:flex;
+	align-items:center;
+	padding:20px;
+	
+}
+nav{
+    flex:1;
+	text-align:right;
+}
+nav ul{
+	display:inline-block;
+	list-style-type:none;
+}
+nav ul li{
+	display:inline-block;
+	margin-right:20px;
+}
+a{
+	text-decoration:none;
+	color:#555;
+}
+p{
+	color:#555;
+}
+.container{
+	max-width:1300px;
+	margin:auto;
+	padding-right:25px;
+	padding-left:2px;
+}
+.row{
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+.col-2{
+	flex-basis:50%;
+	min-width:300px;
+}
+.col-2 img{
+	max-width:100%;
+	padding:50px 0;
+}
+.col-2{
+	font-size:30px;
+	line-height:60px;
+	margin:25px 0;
+}
+.btn{
+	display:inline-block;
+	background:#ff523b;
+	color:#fff;
+	padding:8px 30px;
+	margin:30px 0;
+	border-radius:30px;
+	transition:background 0.5s;
+}
+.btn:hover{
+	background: #563434;
+}
+.header{
+	background: radial-gradient(#fff,#ffd6d6);
+}
+.categories{
+	margin:70px 0;
+}
+.col-3{
+	flex-basis:30%;
+	min-width:250px;
+	margin-bottom:30px;
+}
+.col-3 img{
+	width:100%;
+}
+.small container{
+	max-width:1080px;
+	margin:auto;
+	padding-left:25px;
+	padding-right:25px;
+}
+.footer{
+	background:#000;
+	color:#8a8a8a;
+	font-size:20px;
+	padding:60px 0 20px;
+}
+.footer p{
+	color:#8a8a8a;
+}
+.footer h3{
+	color:#fff;
+	margin-bottom:20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+	min-width:250px;
+	margin-bottom:20px;
+}
+.footer-col-1{
+	flex-basis:30px;
+}
+.footer-col-2{
+	flex:1;
+	text-align:center;
+}
+.footer-col-2 img{
+	width:350px;
+	margin-bottom:20px;
+}
+.footer-col-3, .footer-col-4{
+	flex-basis:12%;
+	text-align:center;
+}
+ul{
+	list-style-type:none;
+}
+.app-logo{
+	margin-top:20px;
+}
+.app-logo img{
+	width:120px;
+}
+hr{
+	border:none;
+	background:#b5b5b5;
+	height:1px;
+	margin:20px 0;
+}
+.copyright{
+   text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+     <div class="logo">
+        <img src="images/logo.png" width=125px>
+     </div>
+     <nav>
+       <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contant</a></li>
+          <li><a href="">Account</a></li>
+       </ul>
+     </nav>
+     <img src="images/cart.png" width="30px" height="30px">
+     </div>
+     <div class="row">
+       <div class="col-2">
+         <h1>Give Your Workout<br>A New Style!</h1>
+         <p>Success isn't always about greatness.</p>
+         <a href="form_cloth_color.html" class="btn">Explore Now &#8594 </a>
+       </div>
+       <div class="col-2">
+          <img src="images/image1.png">
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+<!-----featured categories---->
+   <div class="categories">
+     <div class="small container">
+        <div class="row">
+         <div class="col-3">
+             <img src="images/category-1.jpg">
+         </div>
+         <div class="col-3">
+             <img src="images/category-2.jpg">
+         </div>
+         <div class="col-3">
+             <img src="images/category-3.jpg">
+         </div>
+        </div>
+     </div>
+   </div>
+   
+<!-----featured products---->
+    <div class="small container">
+ 
+       <div class="row">
+          <div class="col-3">
+             <img src="images/product-1.jpg">
+          </div>
+          <div class="col-3">
+             <img src="images/product-2.jpg">
+          </div>
+          <div class="col-3">
+             <img src="images/product-3.jpg">
+          </div>
+       </div>
+    </div>
+<!-----footer---->  
+
+    <div class="footer">
+        <div class="container">
+           <div class="row">
+               <div class="footer-col-1">
+                    <h3>Download out APP</h3>
+                    <p>Download App for Android and ios                       mobil phone</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+               </div>
+               <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    
+               </div>
+               <div class="footer-col-3">
+                    <h3>User Link</h3>
+                    <ul>
+                       <li>Conpose</li>
+                       <li>Blog post</li>
+                       <li>Return Policy</li>
+                       <li>Join Affiliate</li>                   
+                    </ul>
+               </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                       <li>Facebook</li>
+                       <li>Twitter</li>
+                       <li>Instagram</li>
+                       <li>Youtube</li>                   
+                    </ul>
+               </div>
+           <div>
+           
+        </div>
+        
+    </div>
+    <hr>
+           <p class="copyright">Copyright-2021</p>
+</body>
+</html>
