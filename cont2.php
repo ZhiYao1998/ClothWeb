@@ -18,7 +18,7 @@ try {
   //echo "New record created successfully";
 
   $last_id = $conn->lastInsertId();
-  echo "New record created successfully. Last inserted ID is: " . $last_id;
+  echo "New record created successfully."."<br>". "Last inserted ID is: " . $last_id;
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
