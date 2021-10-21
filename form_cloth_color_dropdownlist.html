@@ -36,7 +36,7 @@ div{
 <body class="header">
 
 <form action="dropdownlist.php" method="post">
-<h1>問題一:<br>請選擇您常穿的衣服顏色</h1>
+<h1>問題一:<br>請回答以下問題</h1>
 
 <br>
 <br>
@@ -48,17 +48,20 @@ div{
 
 </php> --> 
 <div >
+	<label for="Name">請輸入全名:</label>
+	<input type="text" id="Name" name="Name">
+	<br><br>
 
 <label for="Cloth">選擇上衣:</label>
 <select name="Cloth" id="Cloth">
-<optgroup label="cloth 1 ~ 5">
+<optgroup label="cloth 0 ~ 4">
 	<option value="0">短袖T-shirt</option>
 	<option value="1">長袖T-shirt</option>
 	<option value="2">五分袖T-shirt</option>
 	<option value="3">短袖帽T</option>
 	<option value="4">長袖帽T</option>
 </optgroup>
-<optgroup label="cloth 6 ~ 11">
+<optgroup label="cloth 5 ~ 10">
 	<option value="5">短袖一般襯衫</option>
 	<option value="6">長袖一般襯衫</option>
 	<option value="7">短袖牛仔襯衫(顏色只有5、10)</option>
@@ -70,7 +73,7 @@ div{
 <br>
 <label for="Color">選擇上衣顏色:</label>
 <select name="Color" id="Color">
-<optgroup label="color 1 ~ 6">
+<optgroup label="color 0 ~ 5">
 	<option value="0">紅色</option>
 	<option value="1">橙色</option>
 	<option value="2">黃色</option>
@@ -78,7 +81,7 @@ div{
 	<option value="4">藍色</option>
 	<option value="5">紫色</option>
 </optgroup>
-<optgroup label="color 7 ~ 12">
+<optgroup label="color 6 ~ 11">
 	<option value="6">棕色</option>
 	<option value="7">灰色</option>
 	<option value="8">白色</option>
@@ -96,7 +99,7 @@ div{
 <br><br>
 <label for="Pant">選擇褲子:</label>
 <select name="Pant" id="Pant">
-<optgroup label="pant 1 ~ 7">
+<optgroup label="pant 0 ~ 6">
 	<option value="0">錐形西裝褲</option>
 	<option value="1">直筒西裝褲</option>
 	<option value="2">卡其褲長褲</option>
@@ -105,7 +108,7 @@ div{
 	<option value="5">一般直筒牛仔褲(顏色只有5、10)</option>
 	<option value="6">破褲直筒牛仔褲(顏色只有5、10)</option>
 </optgroup>
-<optgroup label="pant 8 ~ 14">
+<optgroup label="pant 7 ~ 13">
 	<option value="7">一般窄管牛仔褲(顏色只有5、10)</option>
 	<option value="8">破褲窄管牛仔褲(顏色只有5、10)</option>
 	<option value="9">一般短褲</option>
@@ -118,7 +121,7 @@ div{
 <br>
 <label for="Color2">選擇褲子顏色:</label>
 <select name="Color2" id="Color2">
-<optgroup label="color 1 ~ 6">
+<optgroup label="color 0 ~ 5">
 	<option value="0">紅色</option>
 	<option value="1">橙色</option>
 	<option value="2">黃色</option>
@@ -126,7 +129,7 @@ div{
 	<option value="4">藍色</option>
 	<option value="5">紫色</option>
 </optgroup>
-<optgroup label="color 7 ~ 12">
+<optgroup label="color 6 ~ 11">
 	<option value="6">棕色</option>
 	<option value="7">灰色</option>
 	<option value="8">白色</option>

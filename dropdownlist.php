@@ -1,4 +1,5 @@
 <?php
+$name = $_POST["Name"];
 $cloth=$_POST["Cloth"];
 $color=$_POST["Color"];
 $shade=$_POST["Shade"];
@@ -16,8 +17,8 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully"."<br>";
 
-  $sql = "INSERT INTO cloth (cloth,color,shade,pant,color2,shade2) 
-  VALUES ('$cloth','$color','$shade','$pant','$color2','$shade2')";
+  $sql = "INSERT INTO cloth (name,cloth,color,shade,pant,color2,shade2) 
+  VALUES ('$name','$cloth','$color','$shade','$pant','$color2','$shade2')";
   // use exec() because no results are returned
   $conn->exec($sql);
   //echo "New record created successfully";
