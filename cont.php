@@ -13,6 +13,7 @@ if (mysqli_connect_error()) {
 	$stmt->execute();
 	$stmt->close();
 	$conn->close();
+	//
 }
 
 /* if($conn->connect_error){
