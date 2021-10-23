@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("SELECT * FROM cloth")
+mycursor.execute("SELECT * FROM cloth ORDER BY name ASC")
 
 myresult = mycursor.fetchall()
 
