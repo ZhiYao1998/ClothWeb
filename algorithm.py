@@ -64,7 +64,7 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
 
 
 
-similarities,indices = findksimilarusers(332,M, metric='cosine',k=5)
+similarities,indices = findksimilarusers(211,M, metric='cosine',k=5)
 # The total number of data is 332
 
 # In 四人搭配.csv the last data is numbered 333, the first dataq is numbered 2
