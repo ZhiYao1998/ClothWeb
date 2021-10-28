@@ -31,18 +31,29 @@ myresult = mycursor.fetchall()
 
 M = pd.DataFrame (myresult,columns = ['name','cloth','pant','color','color2','shade','shade2','ID'])
 
-print(M)
+#print(M)
 #declaring k,metric as global which can be changed by the user later
 global k,metric
 k=4 # number of the most similar users
 metric='cosine'
 
-M = M.iloc[:,1:-2]
-print(M)
+names = M.iloc[:,0]
+#print(names)
+#高季廷 0 ~ 83
+#方志堯 84 ~ 210
+#張家瑋 211 ~ 232
+#方韋傑 233 ~ 331
+
+M = M.iloc[:,1:-1]
+#print(M)
 
 cosine_sim = 1-pairwise_distances(M, metric="cosine")
 
 pd.DataFrame(cosine_sim)
+
+total_similarities = dict()
+for name in names:
+    total_similarities[name] = 0
 
 def findksimilarusers(user_id, ratings, metric = metric, k=k):
     similarities=[]
@@ -50,27 +61,43 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
     model_knn = NearestNeighbors(metric = metric, algorithm = 'brute') 
     model_knn.fit(ratings)
 
-    distances, indices = model_knn.kneighbors(ratings.iloc[user_id-1, :].values.reshape(1, -1), n_neighbors = k+1)
-    similarities = 1-distances.flatten()
-    print ('{0} of the most similar users for User {1}:\n'.format(k,user_id) )
-    for i in range(0, len(indices.flatten())):
-        if indices.flatten()[i]+1 == user_id:
-            continue;
+    distances, indices = model_knn.kneighbors(ratings.iloc[user_id, :].values.reshape(1, -1), n_neighbors = k+1)
 
-        else:
-            print ('{0}: User {1}, with similarity of {2}'.format(i, indices.flatten()[i]+1, similarities.flatten()[i]) )
-            
+    flattened_indices = indices.flatten()
+    similarities = 1-distances.flatten() #only 1 D
+
+    print ('{0} of the most similar users for User {1}, whose name is {2}:\n'.format(k,user_id,names[user_id]) )
+    for i in range(0, len(flattened_indices)):
+        # if flattened_indices[i] == user_id:
+        #     print("{0}: iterates the user_id, skip.".format(i))
+        #     continue;
+
+        # else:
+            if names[flattened_indices[i]] != names[user_id]:
+                print ('{0}: User {1} ({2}), with similarity of {3}'.format(i, flattened_indices[i],names[flattened_indices[i]], similarities[i]) );
+                total_similarities[names[flattened_indices[i]]] += similarities[i]
+            else:
+                print("{0}: The user is {1}, same as the picked user, skip.".format(i,names[user_id]))
+
     return similarities,indices
 
 
 
-similarities,indices = findksimilarusers(211,M, metric='cosine',k=5)
-# The total number of data is 332
+#similarities,indices = findksimilarusers(86,M, metric='cosine',k=5)
+#print(total_similarities)
+picked_person = "方韋傑"
 
-# In 四人搭配.csv the last data is numbered 333, the first dataq is numbered 2
-# In here, the last data is numbered 332, the first data is numbered 1
-# the number here + 1 = the number of corresponding row in 四人搭配.csv
+for index,name in enumerate(names):
+    if name == picked_person:
+        similarities,indices = findksimilarusers(index,M, metric='cosine',k=5)
+print(total_similarities)
 
-# negative index means count from back. '-' means count from right to left, and the number is the order.
+""" similarities,indices = findksimilarusers(0,M, metric='cosine',k=5)
+print(total_similarities) """
+
+# The total number of data is 332, numbered 0 ~ 331 (user_id :)
+
+# negative index means count from back. '-' means count from right to left, 
+# and the number is the order, start from 0 but -0 may cause error.
 
 print('\n')
