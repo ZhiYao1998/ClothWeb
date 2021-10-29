@@ -44,10 +44,10 @@ names = M.iloc[:,0]
 #張家瑋 211 ~ 232
 #方韋傑 233 ~ 331
 
-M = M.iloc[:,1:-1]
+Manipulated = M.iloc[:,1:-1]
 #print(M)
 
-cosine_sim = 1-pairwise_distances(M, metric="cosine")
+cosine_sim = 1-pairwise_distances(Manipulated, metric="cosine")
 
 pd.DataFrame(cosine_sim)
 
@@ -58,9 +58,11 @@ for name in names:
 def findksimilarusers(user_id, ratings, metric = metric, k=k):
     similarities=[]
     indices=[]
+    #print(ratings.iloc[user_id,0])
+    #print(ratings)
     model_knn = NearestNeighbors(metric = metric, algorithm = 'brute') 
     model_knn.fit(ratings)
-
+    #print(ratings)
     distances, indices = model_knn.kneighbors(ratings.iloc[user_id, :].values.reshape(1, -1), n_neighbors = k+1)
 
     flattened_indices = indices.flatten()
@@ -74,10 +76,10 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
 
         # else:
             if names[flattened_indices[i]] != names[user_id]:
-                print ('{0}: User {1} ({2}), with similarity of {3}'.format(i, flattened_indices[i],names[flattened_indices[i]], similarities[i]) );
+                print ('{0}: Combination {1} (from {2}), with similarity of {3}'.format(i, flattened_indices[i],names[flattened_indices[i]], similarities[i]) );
                 total_similarities[names[flattened_indices[i]]] += similarities[i]
             else:
-                print("{0}: The user is {1}, same as the picked user, skip.".format(i,names[user_id]))
+                print("{0}: The combination is from {1}, same as the picked user, skip.".format(i,names[user_id]))
 
     return similarities,indices
 
@@ -85,12 +87,25 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
 
 #similarities,indices = findksimilarusers(86,M, metric='cosine',k=5)
 #print(total_similarities)
-picked_person = "方韋傑"
+picked_person = "張家瑋"
 
 for index,name in enumerate(names):
     if name == picked_person:
-        similarities,indices = findksimilarusers(index,M, metric='cosine',k=5)
+        similarities,indices = findksimilarusers(index,Manipulated, metric='cosine',k=5)
 print(total_similarities)
+
+max_value = max(total_similarities.values())  # maximum value
+max_keys = {k for k, v in total_similarities.items() if v == max_value}
+for p in max_keys:
+    print("與 {0} 最相似的使用者(可能有多個)： {1}".format(picked_person,p))
+
+picking_cloth = [1,7,0]
+for p in max_keys:
+    for index,combination in M.iterrows():
+        #print(combination['name'], combination['cloth'], combination['pant'])
+        if combination['name'] == p and combination['cloth'] == 1:
+            print(combination['pant'])
+
 
 """ similarities,indices = findksimilarusers(0,M, metric='cosine',k=5)
 print(total_similarities) """
