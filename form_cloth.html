@@ -36,7 +36,7 @@ div{
 
 <body class="header">
 <form>
-<h1>問題二:<br>請勾選您常穿的衣服的種類</h1>
+<h1>請選您常穿的衣服、顏色、深色:</h1>
    <div >
        
        <img src="cloth/短袖T-shirt.JFIF" width="250"> 
@@ -69,9 +69,41 @@ div{
        <input type="checkbox" value="9" name="Species_9">長袖牛仔襯衫
        <input type="checkbox" value="10" name="Species_10">短袖花襯衫
        <input type="checkbox" value="11" name="Species_11">長袖花襯衫
-       <br>
+</div>
+
+
+
+<div>
+<label for="Color">選擇上衣顏色:</label>
+<select name="Color" id="Color">
+<optgroup label="color 1 ~ 6">
+	<option value="1">紅色</option>
+	<option value="2">橙色</option>
+	<option value="3">黃色</option>
+	<option value="4">綠色</option>
+	<option value="5">藍色</option>
+	<option value="6">紫色</option>
+</optgroup>
+<optgroup label="color 7 ~ 12">
+	<option value="7">棕色</option>
+	<option value="8">灰色</option>
+	<option value="9">白色</option>
+	<option value="10">黑色</option>
+	<option value="11">米色</option>
+	<option value="12">粉紅色</option>
+</optgroup>
+</select>
+<br>
+<br>
+<label for="Shade">上衣顏色深淺:</label>
+<select name="Shade" id="Shade">
+	<option value="0">淺</option>
+	<option value="1">深</option>
+</select>
+<br>
+<br>
        <a href="" class="btn">Next &#8594 </a>
-   </div>
+</div>
 </form>
 
 </body>

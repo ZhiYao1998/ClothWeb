@@ -87,7 +87,7 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
 
 #similarities,indices = findksimilarusers(86,M, metric='cosine',k=5)
 #print(total_similarities)
-picked_person = "張家瑋"
+picked_person = "高季廷"
 
 for index,name in enumerate(names):
     if name == picked_person:
@@ -99,13 +99,23 @@ max_keys = {k for k, v in total_similarities.items() if v == max_value}
 for p in max_keys:
     print("與 {0} 最相似的使用者(可能有多個)： {1}".format(picked_person,p))
 
+
+
+
 picking_cloth = [1,7,0]
+""" for p in max_keys:
+    for index,combination in M.iterrows():
+        #print("indices:",index)
+        #print(combination['name'], combination['cloth'], combination['pant'])
+        if combination['name'] == p and combination['cloth'] == picking_cloth[0]:
+            print("recommended pants:",combination['pant']) """
+
 for p in max_keys:
     for index,combination in M.iterrows():
+        #print("indices:",index)
         #print(combination['name'], combination['cloth'], combination['pant'])
-        if combination['name'] == p and combination['cloth'] == 1:
-            print(combination['pant'])
-
+        if combination['name'] == p and combination['color'] == picking_cloth[1]:
+            print("recommended color of pant:",combination['color2'])
 
 """ similarities,indices = findksimilarusers(0,M, metric='cosine',k=5)
 print(total_similarities) """
