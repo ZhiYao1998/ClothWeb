@@ -1,3 +1,7 @@
+#! C:/Users/sappa/AppData/Local/Microsoft/WindowsApps//pythonw3.9.exe
+#! /usr/bin/env python
+print("Content-type: text/html")
+
 #make necesarry imports
 import numpy as np
 import pandas as pd
@@ -12,8 +16,12 @@ from sklearn.metrics import mean_squared_error
 from math import sqrt
 import sys, os
 from contextlib import contextmanager
-
 import mysql.connector
+
+
+params = sys.argv[1] #即为获取到的PHP传入python的入口参数
+
+print(params)
 
 mydb = mysql.connector.connect(
     host = "localhost",
@@ -68,7 +76,7 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
     flattened_indices = indices.flatten()
     similarities = 1-distances.flatten() #only 1 D
 
-    print ('{0} of the most similar users for User {1}, whose name is {2}:\n'.format(k,user_id,names[user_id]) )
+    #print ('{0} of the most similar users for User {1}, whose name is {2}:\n'.format(k,user_id,names[user_id]) )
     for i in range(0, len(flattened_indices)):
         # if flattened_indices[i] == user_id:
         #     print("{0}: iterates the user_id, skip.".format(i))
@@ -76,10 +84,11 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
 
         # else:
             if names[flattened_indices[i]] != names[user_id]:
-                print ('{0}: Combination {1} (from {2}), with similarity of {3}'.format(i, flattened_indices[i],names[flattened_indices[i]], similarities[i]) );
+                #print ('{0}: Combination {1} (from {2}), with similarity of {3}'.format(i, flattened_indices[i],names[flattened_indices[i]], similarities[i]) );
                 total_similarities[names[flattened_indices[i]]] += similarities[i]
             else:
-                print("{0}: The combination is from {1}, same as the picked user, skip.".format(i,names[user_id]))
+                #print("{0}: The combination is from {1}, same as the picked user, skip.".format(i,names[user_id]))
+                total_similarities[names[flattened_indices[i]]] +=0
 
     return similarities,indices
 
@@ -87,7 +96,8 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
 
 #similarities,indices = findksimilarusers(86,M, metric='cosine',k=5)
 #print(total_similarities)
-picked_person = "高季廷"
+#picked_person = params
+picked_person = "方志堯"
 
 for index,name in enumerate(names):
     if name == picked_person:
@@ -97,7 +107,8 @@ print(total_similarities)
 max_value = max(total_similarities.values())  # maximum value
 max_keys = {k for k, v in total_similarities.items() if v == max_value}
 for p in max_keys:
-    print("與 {0} 最相似的使用者(可能有多個)： {1}".format(picked_person,p))
+    #print("與 {0} 最相似的使用者(可能有多個)： {1}".format(picked_person,p))
+    print("The most similar user is :")
 
 
 
