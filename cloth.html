@@ -2,34 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>form_cloth</title>
+<title>cloth</title>
 <style>
-h1{
-    font-size:45px;
-	text-align: center;
-}
-div{
-    font-size:43px;
-	font-family:DFKai-sb;
-	text-align: center;
-	padding:30px;
-}
-.btn{
-	display:inline-block;
-	background:#ff523b;
-	color:#fff;
-	padding:8px 30px;
-	margin:30px 0;
-	border-radius:30px;
-	transition:background 0.5s;
-	text-align: center;
-}
-.btn:hover{
-	background: #563434;
-}
-.header{
-	background: radial-gradient(#fff,#ffd6d6);
-}
 *{
 	margin:0;
 	padding:0;
@@ -61,11 +35,24 @@ p{
 	color:#555;
 }
 .container{
-	max-width:1300px;
+	max-width:1625px;
 	margin:auto;
 	padding-right:25px;
 	padding-left:2px;
 }
+.header{
+	background: radial-gradient(#fff,#ffd6d6);
+}
+h1{
+    font-size:45px;
+	text-align: center;
+}
+div2{
+    font-size:35px;
+	font-family:DFKai-sb;
+	text-align: center;
+}
+
 .footer{
 	background:#000;
 	color:#8a8a8a;
@@ -75,30 +62,6 @@ p{
 .footer p{
 	color:#8a8a8a;
 }
-.footer h3{
-	color:#fff;
-	margin-bottom:20px;
-}
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-	min-width:250px;
-	margin-bottom:20px;
-}
-.footer-col-1{
-	flex-basis:30px;
-}
-.footer-col-2{
-	flex:1;
-	text-align:center;
-}
-.footer-col-2 img{
-	width:550px;
-	margin-bottom:40px;
-}
-
-ul{
-	list-style-type:none;
-}
-
 hr{
 	border:none;
 	background:#b5b5b5;
@@ -107,6 +70,24 @@ hr{
 }
 .copyright{
    text-align:center;
+}
+page{
+	display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.btn{
+	display:inline-block;
+	background:#ff523b;
+	color:#fff;
+	padding:8px 30px;
+	margin:30px 0;
+	border-radius:30px;
+	transition:background 0.5s;
+}
+.btn:hover{
+	background: #563434;
 }
 </style>
 </head>
@@ -118,7 +99,11 @@ hr{
      
      <nav>
        <ul>
+<<<<<<< Updated upstream
           <li><a href="RedStore.html">首頁</a></li>         
+=======
+          <li><a href="root.html">首頁</a></li>         
+>>>>>>> Stashed changes
           <li><a href="https://www.nptu.edu.tw/index.php">
           NPTU</a></li>
           <li><a href="https://cs.nptu.edu.tw/index.php">
@@ -127,10 +112,10 @@ hr{
        </ul>
      </nav>
     
-    </div>
+    
   </div>
 
-
+<div2>
 <form>
 <h1>請選您常穿的衣服、顏色、深色:</h1>
    <div >
@@ -144,13 +129,10 @@ hr{
        <br>
        <div style="margin-left:-1em">
        <input type="checkbox" value="1" name="Species_1">短袖T-shirt
-
        <input type="checkbox" value="2" name="Species_2">長袖T-shirt
        <input type="checkbox" value="3" name="Species_3">五分袖T-shirt
        <input type="checkbox" value="4" name="Species_4">短袖帽T
-        &ensp;
        <input type="checkbox" value="5" name="Species_5">長袖帽T
-        &ensp;
        <input type="checkbox" value="6" name="Species_6">短袖一般襯衫
        </div>
        <br>
@@ -167,7 +149,9 @@ hr{
        <input type="checkbox" value="11" name="Species_11">長袖花襯衫
 </div>
 
-
+<br>
+<br>
+<br>
 
 <div>
 <label for="Color">選擇上衣顏色:</label>
@@ -201,20 +185,22 @@ hr{
        <a href="" class="btn">Next &#8594 </a>
 </div>
 </form>
+</div2>
 
 <br>
 <br>
+ </div>
 </div>
 <div class="footer">
-        <div class="container">
-           <div class="row">
+			<a href="https://www.nptu.edu.tw/index.php">
+        	<img src="images/NPTU2.png" style="display:block;
+             margin:auto;" /> 
+
             
-            <a href="https://www.nptu.edu.tw/index.php">
-            <img src="images/NPTU2.png">
                     
              
         
-   </div>
+   
     <hr>
            <p class="copyright">Copyright-2021</p>
 </body>

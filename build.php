@@ -11,13 +11,19 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
+<<<<<<< Updated upstream
 try {
+=======
+print("The build.php does run.");
+echo "Where will this be printed?";
+ try {
+>>>>>>> Stashed changes
   $conn = new PDO("mysql:host=$servername;dbname=clothweb", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully"."<br>";
 
-  $sql = "INSERT INTO cloth (name,cloth,color,shade,pant,color2,shade2) 
+  $sql = "INSERT INTO cloth2 (name,cloth,color,shade,pant,color2,shade2) 
   VALUES ('$name','$cloth','$color','$shade','$pant','$color2','$shade2')";
   // use exec() because no results are returned
   $conn->exec($sql);
@@ -29,5 +35,9 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
+<<<<<<< Updated upstream
 $conn = null;
+=======
+$conn = null; 
+>>>>>>> Stashed changes
 ?>

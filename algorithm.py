@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+#! C:/Users/sappa/AppData/Local/Microsoft/WindowsApps/pythonw3.9.exe
+#! /usr/bin/env python
+print("Content-type: text/html")
+
+>>>>>>> Stashed changes
 #make necesarry imports
 import numpy as np
 import pandas as pd
