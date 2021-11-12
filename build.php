@@ -11,13 +11,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-<<<<<<< Updated upstream
 try {
-=======
-print("The build.php does run.");
-echo "Where will this be printed?";
- try {
->>>>>>> Stashed changes
   $conn = new PDO("mysql:host=$servername;dbname=clothweb", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
