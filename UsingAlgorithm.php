@@ -4,8 +4,12 @@ $name = $_POST["Name"];
 //print(phpinfo());
 //$hello = 'world';
 //echo getcwd() . "<br>";
-print(shell_exec("sudo apache2 -v"));
+//print(shell_exec("sudo apache2 -v"));
+//$result = shell_exec('python algorithm.py 方韋傑');
+// C:\Users\sappa\AppData\Local\Microsoft\WindowsApps\python.exe
+// D:\Program_Files\xampp\htdocs\ClothWeb\algorithm.py
 $result = shell_exec('python algorithm.py 方韋傑');
+
 printf($result);
 //system('ls > output.txt');
 /* $command = 'python algorithm.py 方志堯';

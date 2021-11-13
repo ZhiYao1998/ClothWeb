@@ -19,7 +19,7 @@ echo "Where will this be printed?";
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully"."<br>";
 
-  $sql = "INSERT INTO cloth (name,cloth,color,shade,pant,color2,shade2) 
+  $sql = "INSERT INTO cloth2 (name,cloth,color,shade,pant,color2,shade2) 
   VALUES ('$name','$cloth','$color','$shade','$pant','$color2','$shade2')";
   // use exec() because no results are returned
   $conn->exec($sql);
@@ -31,5 +31,7 @@ echo "Where will this be printed?";
   echo "Connection failed: " . $e->getMessage();
 }
 
+<<<<<<< HEAD
 $conn = null; */
+$conn = null;
 ?>

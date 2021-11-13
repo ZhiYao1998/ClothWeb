@@ -1,4 +1,4 @@
-#! C:/Users/sappa/AppData/Local/Microsoft/WindowsApps//pythonw3.9.exe
+#! C:/Users/sappa/AppData/Local/Microsoft/WindowsApps/pythonw3.9.exe
 #! /usr/bin/env python
 print("Content-type: text/html")
 

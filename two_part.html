@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>cloth_pant</title>
+<title>two_part</title>
 </head>
 <style>
 *{
@@ -79,15 +79,13 @@ page{
 }
 </style>
 
-
-<body >
+<body>
 <div class="header">
   <div class="container">
     <div class="navbar">
-     
      <nav>
        <ul>
-          <li><a href="root.html">首頁</a></li> 
+          <li><a href="root.html">首頁</a></li>         
           <li><a href="https://www.nptu.edu.tw/index.php">
           NPTU</a></li>
           <li><a href="https://cs.nptu.edu.tw/index.php">
@@ -95,33 +93,31 @@ page{
           
        </ul>
      </nav>
-    
+     
     </div>
+ 
+ 
   
 
 
-<form action="UsingAlgorithm.php" method="post">
-<h1>問題二:<br>選擇想要推薦的項目</h1>
+<div2>
+<form action="" method="post">
+<h1><br>選擇想要進入的部分</h1>
 <br><br><br>
 <div>
-	<label for="Name">請輸入全名:</label>
-	<input type="text" id="Name" name="Name">
+
 
 <br>
-<input type ="submit" class="btn">	
-<br>
 <label><input type="radio" name="cloth_pant"  value="cloth_pant"
-onclick="javascript:this.form.action='cloth.html';this.form.submit()">
-選擇衣服推薦您褲子</label>
+onclick="javascript:this.form.action='build.html';this.form.submit()">
+第一部分</label>
 <br>
 <br>
 <br>
 <label><input type="radio" name="cloth_pant" value="pant_cloth"
-onclick="javascript:this.form.action='pant.html';this.form.submit()">
-選擇褲子推薦您衣服</label>
+onclick="javascript:this.form.action='cloth_pant.html';this.form.submit()">
+第二部分</label>
 
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -130,6 +126,8 @@ onclick="javascript:this.form.action='pant.html';this.form.submit()">
 <br>
 <br>
 </div>
+
+
 </form>
 </div2>
 
@@ -148,5 +146,7 @@ onclick="javascript:this.form.action='pant.html';this.form.submit()">
    
     <hr>
            <p class="copyright">Copyright-2021</p>
+
+
 </body>
 </html>
