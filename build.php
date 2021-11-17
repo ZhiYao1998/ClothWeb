@@ -11,9 +11,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-print("The build.php does run.");
-echo "Where will this be printed?";
-/* try {
+ try {
   $conn = new PDO("mysql:host=$servername;dbname=clothweb", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -31,7 +29,6 @@ echo "Where will this be printed?";
   echo "Connection failed: " . $e->getMessage();
 }
 
-<<<<<<< HEAD
-$conn = null; */
-$conn = null;
+
+$conn = null; 
 ?>
