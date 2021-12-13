@@ -12,7 +12,7 @@ putenv('LC_ALL='.$locale);
 //$number=escapeshellarg($number);
 
 //Must use " to enclose the string of command.
-$result = shell_exec("/var/www/ClothWeb/venv/bin/python3 algorithm.py $name $type");
+$result = shell_exec("/var/www/ClothWeb/venv/bin/python3 algorithm_alter.py $name $type");
 
 echo "<pre>";
 printf($result);
