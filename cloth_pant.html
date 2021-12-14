@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -104,14 +101,14 @@ page{
   
 
 <div2>
-<form >
+<!--- <form > --->
 <h1>選擇想要推薦的項目</h1>
 <br><br><br>
 <div>
 
 
 <br>
-<label><input type="radio" name="cloth_pant"  value="0" id="Flag" method="post"
+<!--- <label><input type="radio" name="cloth_pant"  value="0" id="Flag" method="post"
 onclick="javascript:this.form.action='cloth.html';this.form.submit()">
 選擇衣服推薦您褲子</label>
 <br>
@@ -120,6 +117,14 @@ onclick="javascript:this.form.action='cloth.html';this.form.submit()">
 <label><input type="radio" name="cloth_pant" value="1" id="Flag" method="post"
 onclick="javascript:this.form.action='pant.html';this.form.submit()">
 選擇褲子推薦您衣服</label>
+--->
+<form action="session.php" method="post" >
+    <input type="radio" name="MyRadio" value="0" checked>選擇衣服推薦您褲子<br>
+    <input type="radio" name="MyRadio" value="1">選擇褲子推薦您衣服<br>
+   <!--- <input type="submit" value="Result" name="Result"> --->
+    <input type="submit" class="btn" value="submit" >
+
+</form>
 
 <br>
 <br>
@@ -131,7 +136,7 @@ onclick="javascript:this.form.action='pant.html';this.form.submit()">
 <br>
 <br>
 </div>
-</form>
+<!--- </form> --->
 </div2>
 
   </div>

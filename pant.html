@@ -113,7 +113,8 @@ page{
   </div>
   
 <div2>
-<form action="UsingAlgorithm.php" method="post">
+<form action="UsingAlgorithm.php" method="post" id="pantform" >
+
 <label for="Name">請輸入全名:</label>
         <input type="text" id="Name" name="Name">
         <br><br>
@@ -189,7 +190,7 @@ page{
 </div>
 <br>
 <label for="Pant">褲子類型:</label>
-<select name="Pant" id="Type">
+<select name="Type" id="Type" form="pantform" >
 <optgroup label="pant 1 ~ 7">
 	<option value="1">錐形西裝褲</option>
 	<option value="2">直筒西裝褲</option>
@@ -243,7 +244,7 @@ page{
 <br>
 <br>
        
-       <input type ="submit" class="btn" value="開始推薦">
+       <input type="submit" class="btn" value="開始推薦">
 </div>
 </form>
 </div2>

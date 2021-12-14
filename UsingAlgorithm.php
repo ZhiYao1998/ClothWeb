@@ -1,12 +1,13 @@
 <?php
-
-//$name = $_POST["Name"];
-//$type = $_POST["Type"];
+session_start();
+$flag = $_SESSION["cloth_pant"];
+$name = $_POST["Name"];
+$type = $_POST["Type"];
 //$flag = $_POST["Flag"];
 
-$name = '方志堯';
-$type = 11;
-$flag = 0;
+//$name = '方志堯';
+//$type = 11;
+//$flag = 0;
 
 $locale = 'en_US.utf-8';
 setlocale(LC_ALL, $locale);

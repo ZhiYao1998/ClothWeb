@@ -1,4 +1,5 @@
 <?php
+header("Location: http://clothweb/build.html?cloth_pant=cloth_pant");
 $name = $_POST["Name"];
 $cloth=$_POST["Cloth"];
 $color=$_POST["Color"];
@@ -32,5 +33,6 @@ $password = "password";
 }
 
 
-$conn = null; 
+$conn = null;
+exit();
 ?>
