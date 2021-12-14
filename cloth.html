@@ -99,7 +99,7 @@ page{
      
      <nav>
        <ul>      
-          <li><a href="root.html">首頁</a></li>  
+          <li><a href="index.html">首頁</a></li>  
           <li><a href="https://www.nptu.edu.tw/index.php">
           NPTU</a></li>
           <li><a href="https://cs.nptu.edu.tw/index.php">
@@ -112,7 +112,7 @@ page{
   </div>
 
 <div2>
-<form>
+<form action="UsingAlgorithm.php" method="post">
 <label for="Name">請輸入全名:</label>
         <input type="text" id="Name" name="Name">
         <br><br>
@@ -127,13 +127,26 @@ page{
        <img src="cloth/長袖帽T.jfif" width="250" />
        <img src="cloth/短袖一般襯衫.jfif" width="250" /><br>
        <br>
-       <div style="margin-left:-1em">
-       <input type="checkbox" value="1" name="Species_1">短袖T-shirt
-       <input type="checkbox" value="2" name="Species_2">長袖T-shirt
-       <input type="checkbox" value="3" name="Species_3">五分袖T-shirt
-       <input type="checkbox" value="4" name="Species_4">短袖帽T
-       <input type="checkbox" value="5" name="Species_5">長袖帽T
-       <input type="checkbox" value="6" name="Species_6">短袖一般襯衫
+       <div style="text-align:left">
+       &nbsp
+       短袖T-shirt
+       &nbsp
+       長袖T-shirt
+       &nbsp
+       &nbsp
+       五分袖T-shirt
+       &nbsp
+       &nbsp
+       短袖帽T
+       &nbsp
+       &nbsp
+       &nbsp
+       長袖帽T
+       &nbsp
+       &nbsp
+       &nbsp
+       短袖一般襯衫
+       
        </div>
        <br>
        <img src="cloth/長袖一般襯衫.jpg" width="250"> 
@@ -142,14 +155,46 @@ page{
        <img src="cloth/短袖花襯衫.jpg" width="250" />
        <img src="cloth/長袖花襯衫.jpg" width="250" /><br>
        <br>
-       <input type="checkbox" value="7" name="Species_7">長袖一般襯衫
-       <input type="checkbox" value="8" name="Species_8">短袖牛仔襯衫
-       <input type="checkbox" value="9" name="Species_9">長袖牛仔襯衫
-       <input type="checkbox" value="10" name="Species_10">短袖花襯衫
-       <input type="checkbox" value="11" name="Species_11">長袖花襯衫
+       
+       <div style="text-align:left">
+       &nbsp
+       &nbsp
+       &nbsp
+       &nbsp
+       長袖一般襯衫
+       &nbsp
+       &nbsp
+       短袖牛仔襯衫
+       &nbsp
+       長袖牛仔襯衫
+       &nbsp
+       &nbsp
+       短袖花襯衫
+       &nbsp
+       &nbsp
+       長袖花襯衫
+       </div>
 </div>
 
 <br>
+<label for="Cloth">上衣類型:</label>
+<select name="Cloth" id="Type">
+<optgroup label="cloth 1 ~ 5">
+	<option value="1">短袖T-shirt</option>
+	<option value="2">長袖T-shirt</option>
+	<option value="3">五分袖T-shirt</option>
+	<option value="4">短袖帽T</option>
+	<option value="5">長袖帽T</option>
+</optgroup>
+<optgroup label="cloth 6 ~ 11">
+	<option value="6">短袖一般襯衫</option>
+	<option value="7">長袖一般襯衫</option>
+	<option value="8">短袖牛仔襯衫(顏色只有藍、黑)</option>
+	<option value="9">長袖牛仔襯衫(顏色只有藍、黑)</option>
+	<option value="10">短袖花襯衫(只有雜色)</option>
+	<option value="11">長袖花襯衫(只有雜色)</option>
+</optgroup>
+</select>
 <br>
 <br>
 
@@ -183,7 +228,8 @@ page{
 </select>
 <br>
 <br>
-       <a href="" class="btn">Next &#8594 </a>
+      
+       <input type ="submit" class="btn" value="開始推薦">
 </div>
 </form>
 </div2>

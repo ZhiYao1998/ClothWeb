@@ -100,7 +100,7 @@ page{
      
      <nav>
        <ul>
-          <li><a href="root.html">首頁</a></li>
+          <li><a href="index.html">首頁</a></li>
           <li><a href="https://www.nptu.edu.tw/index.php">
           NPTU</a></li>
           <li><a href="https://cs.nptu.edu.tw/index.php">
@@ -113,7 +113,10 @@ page{
   </div>
   
 <div2>
-<form>
+<form action="UsingAlgorithm.php" method="post">
+<label for="Name">請輸入全名:</label>
+        <input type="text" id="Name" name="Name">
+        <br><br>
 <h1>請選擇一件您常穿的褲子，並選擇顏色、深淺:</h1>
    <div >
        
@@ -124,12 +127,18 @@ page{
        <img src="pant/棉褲長褲.jpg" width="250" />
        <br>
        <br>
-       <div style="margin-left:-1em">
-       <input type="checkbox" value="1" name="Species_1">錐形西裝褲
-       <input type="checkbox" value="2" name="Species_2">直筒西裝褲
-       <input type="checkbox" value="3" name="Species_3">卡其褲長褲     
-       <input type="checkbox" value="4" name="Species_4">廚師褲
-       <input type="checkbox" value="5" name="Species_5">棉褲長褲
+       
+       <div style="text-align:left">
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       錐形西裝褲
+       &nbsp&nbsp&nbsp&nbsp
+       直筒西裝褲
+       &nbsp&nbsp&nbsp&nbsp
+       卡其褲長褲
+       &nbsp&nbsp&nbsp&nbsp&nbsp  
+       廚師褲
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       棉褲長褲
        
        
        </div>
@@ -141,14 +150,19 @@ page{
        <img src="pant/破褲窄管牛仔褲.jfif" width="300" />
        <img src="pant/一般短褲.jpg" width="300" />
       
-       <div style="margin-left:-1em">
+       <div style="text-align:left">
        <br>
        <br>
-       <input type="checkbox" value="6" name="Species_6">一般直筒牛仔褲
-       <input type="checkbox" value="7" name="Species_7">破褲直筒牛仔褲
-       <input type="checkbox" value="8" name="Species_8">一般窄管牛仔褲
-       <input type="checkbox" value="9" name="Species_9">破褲窄管牛仔褲
-       <input type="checkbox" value="10" name="Species_10">一般短褲
+       &nbsp&nbsp
+       一般直筒牛仔褲
+       &nbsp&nbsp
+       破褲直筒牛仔褲
+       &nbsp&nbsp
+       一般窄管牛仔褲
+       &nbsp&nbsp
+       破褲窄管牛仔褲
+       &nbsp&nbsp&nbsp&nbsp
+       一般短褲
        
        </div>
        <br>
@@ -158,16 +172,44 @@ page{
        <img src="pant/破褲短牛仔褲.jpg" width="250" />
        <img src="pant/卡其褲短褲.jpg" width="250" />
        <img src="pant/棉褲短褲.jpg" width="250" />
+       </div>
        <br>
        <br>
-       <input type="checkbox" value="11" name="Species_11">一般短牛仔褲
-       <input type="checkbox" value="12" name="Species_12">破褲短牛仔褲
-       <input type="checkbox" value="13" name="Species_13">卡其褲短褲
-       <input type="checkbox" value="14" name="Species_14">棉褲短褲
+       <div style="text-align:left">
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       &nbsp
+       一般短牛仔褲
+       &nbsp&nbsp
+       破褲短牛仔褲
+       &nbsp&nbsp
+       卡其褲短褲
+       &nbsp&nbsp&nbsp&nbsp
+       棉褲短褲
        </div>
 </div>
-
 <br>
+<label for="Pant">褲子類型:</label>
+<select name="Pant" id="Type">
+<optgroup label="pant 1 ~ 7">
+	<option value="1">錐形西裝褲</option>
+	<option value="2">直筒西裝褲</option>
+	<option value="3">卡其褲長褲</option>
+	<option value="4">廚師褲</option>
+	<option value="5">棉褲長褲</option>
+	<option value="6">一般直筒牛仔褲(顏色只有藍、黑)</option>
+	<option value="7">破褲直筒牛仔褲(顏色只有藍、黑)</option>
+</optgroup>
+<optgroup label="pant 8 ~ 14">
+	<option value="8">一般窄管牛仔褲(顏色只有藍、黑)</option>
+	<option value="9">破褲窄管牛仔褲(顏色只有藍、黑)</option>
+	<option value="10">一般短褲</option>
+	<option value="11">一般短牛仔褲(顏色只有藍、黑)</option>
+	<option value="12">破褲短牛仔褲(顏色只有藍、黑)</option>
+	<option value="13">卡其褲短褲</option>
+	<option value="14">棉褲短褲</option>
+</optgroup>
+</select>
+
 <br>
 <br>
 
@@ -200,7 +242,8 @@ page{
 </select>
 <br>
 <br>
-       <a href="" class="btn">Next &#8594 </a>
+       
+       <input type ="submit" class="btn" value="開始推薦">
 </div>
 </form>
 </div2>

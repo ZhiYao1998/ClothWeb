@@ -20,6 +20,8 @@ import mysql.connector
 user = sys.argv[1]
 Type = sys.argv[2]
 flag = sys.argv[3] # 0 => cloth | 1 => pant
+flag = int(flag)
+
 print("當前使用者：",user)
 print("clothing type:",Type)
 print("choose : pant") if flag == 1 else print("choose : cloth")

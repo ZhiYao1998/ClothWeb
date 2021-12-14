@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -87,7 +91,7 @@ page{
      
      <nav>
        <ul>
-          <li><a href="root.html">首頁</a></li>         
+          <li><a href="index.html">首頁</a></li>         
           <li><a href="https://www.nptu.edu.tw/index.php">
           NPTU</a></li>
           <li><a href="https://cs.nptu.edu.tw/index.php">
@@ -100,20 +104,20 @@ page{
   
 
 <div2>
-<form action="" method="post">
+<form >
 <h1>選擇想要推薦的項目</h1>
 <br><br><br>
 <div>
 
 
 <br>
-<label><input type="radio" name="cloth_pant"  value="cloth_pant"
+<label><input type="radio" name="cloth_pant"  value="0" id="Flag" method="post"
 onclick="javascript:this.form.action='cloth.html';this.form.submit()">
 選擇衣服推薦您褲子</label>
 <br>
 <br>
 <br>
-<label><input type="radio" name="cloth_pant" value="pant_cloth"
+<label><input type="radio" name="cloth_pant" value="1" id="Flag" method="post"
 onclick="javascript:this.form.action='pant.html';this.form.submit()">
 選擇褲子推薦您衣服</label>
 
