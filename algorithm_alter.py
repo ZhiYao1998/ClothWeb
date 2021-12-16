@@ -71,7 +71,7 @@ def findksimilarusers(user_id, ratings, metric = metric, k=k):
     indices=[]
     
     
-    model_knn = NearestNeighbors(metric = metric, algorithm = 'brute') 
+    model_knn = NearestNeighbors(metric = metric, algorithm = 'auto') 
     model_knn.fit(ratings)
     
     distances, indices = model_knn.kneighbors(ratings.iloc[user_id, :].values.reshape(1, -1), n_neighbors = k+1)
