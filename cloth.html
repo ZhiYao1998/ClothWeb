@@ -8,7 +8,7 @@
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
-	}
+}
 .navbar{
 	display:flex;
 	align-items:center;
@@ -89,6 +89,9 @@ page{
 .btn:hover{
 	background: #563434;
 }
+.outer >* {
+  display:inline-block;
+}
 </style>
 </head>
 
@@ -118,67 +121,91 @@ page{
         <br><br>
 
 <h1>請選擇一件您常穿的衣服,並選顏色、深淺:</h1>
-   <div >
-       
-       <img src="cloth/短袖T-shirt.jfif" width="250"> 
-       <img src="cloth/長袖T-shirt.jpg" width="250" />
-       <img src="cloth/五分袖T-shirt.jfif" width="250" />
-       <img src="cloth/短袖帽T.jfif" width="250" />
-       <img src="cloth/長袖帽T.jfif" width="250" />
-       <img src="cloth/短袖一般襯衫.jfif" width="250" /><br>
+<br><br>
+   <div class="outer">
+       <div>
+       <img src="cloth/短袖T-shirt.jfif" width="250">
        <br>
-       <div style="text-align:left">
-       &nbsp
        短袖T-shirt
-       &nbsp
-       長袖T-shirt
-       &nbsp
-       &nbsp
-       五分袖T-shirt
-       &nbsp
-       &nbsp
-       短袖帽T
-       &nbsp
-       &nbsp
-       &nbsp
-       長袖帽T
-       &nbsp
-       &nbsp
-       &nbsp
-       短袖一般襯衫
-       
        </div>
-       <br>
-       <img src="cloth/長袖一般襯衫.jpg" width="250"> 
-       <img src="cloth/短袖牛仔襯衫.jpg" width="250" />
-       <img src="cloth/長袖牛仔襯衫.jpg" width="250" />
-       <img src="cloth/短袖花襯衫.jpg" width="250" />
-       <img src="cloth/長袖花襯衫.jpg" width="250" /><br>
-       <br>
        
-       <div style="text-align:left">
-       &nbsp
-       &nbsp
-       &nbsp
-       &nbsp
+
+       <div>
+       <img src="cloth/長袖T-shirt.jpg" width="250" />
+       <br>
+       長袖T-shirt
+       </div> 
+       
+
+       <div>
+       <img src="cloth/五分袖T-shirt.jfif" width="250" />
+       <br>
+       五分袖T-shirt
+       </div>
+       
+
+       <div>
+       <img src="cloth/短袖帽T.jfif" width="250" />
+       <br>
+       短袖帽T
+       </div>
+       
+
+       <div>
+       <img src="cloth/長袖帽T.jfif" width="250" />
+       <br>
+       長袖帽T
+       </div>
+       
+
+       <div>
+       <img src="cloth/短袖一般襯衫.jfif" width="250" />
+       <br>
+       短袖一般襯衫
+       </div>
+       
+       <br><br> 
+       <div>
+       <img src="cloth/長袖一般襯衫.jpg" width="250">
+       <br>
        長袖一般襯衫
-       &nbsp
-       &nbsp
+       </div>
+       
+       <div>
+       <img src="cloth/短袖牛仔襯衫.jpg" width="250">
+       <br>
        短袖牛仔襯衫
-       &nbsp
+       </div>
+       
+
+       <div>
+       <img src="cloth/長袖牛仔襯衫.jpg" width="250">
+       <br>
        長袖牛仔襯衫
-       &nbsp
-       &nbsp
+       </div>
+       
+
+       <div>
+       <img src="cloth/短袖花襯衫.jpg" width="250">
+       <br>
        短袖花襯衫
-       &nbsp
-       &nbsp
+       </div>
+       
+
+       <div>
+       <img src="cloth/長袖花襯衫.jpg" width="250">
+       <br>
        長袖花襯衫
        </div>
+
+       <br>
+       <br>
+       
 </div>
 
 <br>
 <label for="Cloth">上衣類型:</label>
-<select name="Type" id="Type" form="clothform" >
+<select name="Type" id="Type" form="clothform">
 <optgroup label="cloth 1 ~ 5">
 	<option value="1">短袖T-shirt</option>
 	<option value="2">長袖T-shirt</option>

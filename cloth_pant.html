@@ -78,6 +78,18 @@ page{
     justify-content: center; 
     align-items: center; 
 }
+.btn{
+        display:inline-block;
+        background:#ff523b;
+        color:#fff;
+        padding:8px 30px;
+        margin:30px 0;
+        border-radius:30px;
+        transition:background 0.5s;
+}
+.btn:hover{
+        background: #563434;
+}
 </style>
 
 
@@ -103,7 +115,7 @@ page{
 <div2>
 <!--- <form > --->
 <h1>選擇想要推薦的項目</h1>
-<br><br><br>
+<br>
 <div>
 
 
@@ -119,21 +131,20 @@ onclick="javascript:this.form.action='pant.html';this.form.submit()">
 選擇褲子推薦您衣服</label>
 --->
 <form action="session.php" method="post" >
-    <input type="radio" name="MyRadio" value="0" checked>選擇衣服推薦您褲子<br>
-    <input type="radio" name="MyRadio" value="1">選擇褲子推薦您衣服<br>
+    <label>
+    	<input type="radio" name="MyRadio" value="0" checked>選擇衣服推薦您褲子
+    </label>
+    <br>
+    <br>
+    <label>
+    	<input type="radio" name="MyRadio" value="1">選擇褲子推薦您衣服<br>
+    </label>
+    <br>
    <!--- <input type="submit" value="Result" name="Result"> --->
-    <input type="submit" class="btn" value="submit" >
+    <input type="submit" class="btn" value="下一步" >
 
 </form>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 </div>
 <!--- </form> --->
