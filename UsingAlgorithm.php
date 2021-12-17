@@ -3,6 +3,8 @@ session_start();
 $flag = $_SESSION["cloth_pant"];
 $name = $_POST["Name"];
 $type = $_POST["Type"];
+$color = $_POST["Color"];
+$shade = $_POST["Shade"];
 //$flag = $_POST["Flag"];
 
 //$name = '方志堯';
@@ -17,7 +19,7 @@ putenv('LC_ALL='.$locale);
 //$number=escapeshellarg($number);
 
 //Must use " to enclose the string of command.
-$result = shell_exec("/var/www/ClothWeb/venv/bin/python3 algorithm_alter.py $name $type $flag");
+$result = shell_exec("/var/www/ClothWeb/venv/bin/python3 algorithm_alter2.py $name $type $flag $color $shade ");
 
 echo "<pre>";
 printf($result);
